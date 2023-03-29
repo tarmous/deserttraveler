@@ -1,0 +1,40 @@
+
+#Don't ignore this
+.gitignore
+
+#ALL
+/*
+/*/
+
+#Ignore Mega Sync assets folder
+# /Assets/DT_Assets/
+
+#Don't ignore this
+!.gitignore
+
+#Ignore ALL Rule for Project settings
+!/ProjectSettings/
+
+#Ignore ALL Rule for Assets folder
+!/Assets/
+
+# Visual Studio cache directory
+.vs/
+
+# Gradle cache directory
+.gradle/
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+
+# Crashlytics generated file
+crashlytics-build.properties

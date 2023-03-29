@@ -1,0 +1,42 @@
+controls
+{
+	w-s: Throttle
+	a-d: steering
+	mouse: look around
+	mouse wheel: zoom in/out
+}
+
+board prefab setup:
+{
+	using:
+
+	-rigidbody
+	--no constraints (doesn't work well)
+	--i want to find a more effective way to constraint Z-rotation
+
+	-box collider 
+	-- altered size and center
+
+	-physics material
+
+	-child object for visuals
+
+	--collider box is higher than visual to give a better illusion of surfing
+
+	sand drifting board script:
+	{
+
+		raycast points: 		used to check if board is grounded
+		layer mask: 			used to make raycast ignore player
+		max movement speed: 		the max speed the board can reach
+		reach max speed in seconds:	<- this
+		halt in seconds from max speed: <- also this
+		Rotation rate:			degrees/sec (should be)
+
+		Using:
+		rigidbody.addtorgue ( a vector, ForceMode.velocityChange)
+		rigidbody.addforce ( a vector, ForceMode.velocityChange)
+
+		the force mode helps to configure the movement to our needs (ignoring mass/drag/etc)
+	}
+}
